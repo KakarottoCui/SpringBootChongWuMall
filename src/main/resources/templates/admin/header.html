@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header-fragment">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>mall | 后台管理系统</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="shortcut icon" th:href="@{/admin/dist/img/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/admin/dist/css/font-awesome.min.css}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" th:href="@{/admin/dist/css/ionicons.min.css}">
+    <link rel="stylesheet" th:href="@{/admin/dist/css/main.css}">
+    <link rel="stylesheet" th:href="@{/admin/plugins/bootstrap/css/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/admin/plugins/sweetalert/sweetalert.css}"/>
+    <link rel="stylesheet" th:href="@{/admin/plugins/jqgrid-5.5.2/ui.jqgrid-bootstrap4.css}"/>
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/admin/dist/css/adminlte.min.css}">
+</head>
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom" th:fragment="header-nav">
+    <!-- Homepage navbar links -->
+    <ul class="nav nav-tabs homepage" style="display: none">
+        <li class="nav-item">
+            <a th:href="@{/admin/index}" th:class="${path}=='index'?'nav-link active':'nav-link'">
+                首页
+            </a>
+        </li>
+        <li class="nav-item">
+            <a th:href="@{/admin/goods/edit}" th:class="${path}=='goods-edit'?'nav-link active':'nav-link'">
+                商品信息
+            </a>
+        </li>
+    </ul>
+
+    <!-- System Manage navbar links -->
+    <ul class="nav nav-tabs sys-manage" style="display: none">
+        <li class="nav-item">
+            <a th:href="@{/admin/categories?parentId=0&categoryLevel=1&backParentId=0}"
+               th:class="${path}=='newbee_mall_category'?'nav-link active':'nav-link'">
+                分类管理
+            </a>
+        </li>
+        <li class="nav-item">
+            <a th:href="@{/admin/goods}" th:class="${path}=='newbee_mall_goods'?'nav-link active':'nav-link'">
+                宠物管理
+            </a>
+        </li>
+        <li class="nav-item">
+            <a th:href="@{/admin/users}" th:class="${path}=='users'?'nav-link active':'nav-link'">
+                会员管理
+            </a>
+        </li>
+        <li class="nav-item">
+            <a th:href="@{/admin/orders}" th:class="${path}=='orders'?'nav-link active':'nav-link'">
+                订单管理
+            </a>
+        </li>
+    </ul>
+
+    <!-- System Config navbar links -->
+    <ul class="nav nav-tabs sys-config" style="display: none">
+        <li class="nav-item">
+            <a th:href="@{/admin/carousels}"
+               th:class="${path}=='newbee_mall_carousel'?'nav-link active':'nav-link'">
+                轮播图配置
+            </a>
+        </li>
+        <li class="nav-item">
+            <a th:href="@{/admin/indexConfigs?configType=3}"
+               th:class="${path}=='INDEX_GOODS_HOTS'?'nav-link active':'nav-link'">
+                热销宠物配置
+            </a>
+        </li>
+        <li class="nav-item">
+            <a th:href="@{/admin/indexConfigs?configType=4}"
+               th:class="${path}=='INDEX_GOODS_NEW'?'nav-link active':'nav-link'">
+                新宠上线配置
+            </a>
+        </li>
+        <li class="nav-item">
+            <a th:href="@{/admin/indexConfigs?configType=5}"
+               th:class="${path}=='INDEX_GOODS_RECOMMOND'?'nav-link active':'nav-link'">
+                为你推荐配置
+            </a>
+        </li>
+    </ul>
+
+    <!-- Statistics navbar links -->
+    <ul class="nav nav-tabs statistics" style="display: none">
+        <li class="nav-item">
+            <a th:href="@{/admin/statistics/toStatistics}"
+               th:class="${path}=='toStatistics'?'nav-link active':'nav-link'">
+                热销商品
+            </a>
+        </li>
+    </ul>
+
+    <!-- System Setting navbar links -->
+    <ul class="nav nav-tabs sys-setting" style="display: none">
+        <li class="nav-item">
+            <a th:href="@{/admin/tips/toEdit}"
+               th:class="${path}=='tips_edit'?'nav-link active':'nav-link'">
+                公告配置
+            </a>
+        </li>
+        <li class="nav-item">
+            <a th:href="@{/admin/profile}"
+               th:class="${path}=='profile'?'nav-link active':'nav-link'">
+                权限管理
+            </a>
+        </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link" th:href="@{/}">
+                <i class="fa fa-paper-plane">&nbsp;&nbsp;首页</i>
+            </a>
+        </li>
+
+    </ul>
+</nav>
+<!-- /.navbar -->
+</html>

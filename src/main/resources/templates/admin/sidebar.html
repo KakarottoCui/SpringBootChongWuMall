@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<aside th:fragment="sidebar-fragment(path)" class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a th:href="@{/admin/index}" class="brand-link">
+        <img th:src="@{/admin/dist/img/new-bee-logo-2.jpg}" alt="ssm-cluster Logo"
+             class="brand-image img-circle elevation-3"
+             style="opacity: .8">
+        <span class="brand-text font-weight-light">萌宠乐园交易平台</span>
+    </a>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                <li class="nav-item">
+                    <a data-selected="homepage" th:href="@{/admin/index}"
+                       th:class="${path=='index'||path=='goods-edit'}?'nav-link active':'nav-link'">
+                        <i class="nav-icon fa fa-flash"></i>
+                        <p>
+                            首页
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a data-selected="sys-manage"
+                       th:href="@{/admin/categories?parentId=0&categoryLevel=1&backParentId=0}"
+                       th:class="${path=='newbee_mall_category'||path=='newbee_mall_goods'||path=='users'||path=='orders'}?'nav-link active':'nav-link'">
+                        <i class="nav-icon fa fa-hand-o-up" aria-hidden="true"></i>
+                        <p>
+                            系统管理
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a data-selected="sys-config"
+                       th:href="@{/admin/carousels}"
+                       th:class="${path=='newbee_mall_carousel'||path=='INDEX_GOODS_HOTS'||path=='INDEX_GOODS_NEW'||path=='INDEX_GOODS_RECOMMOND'}?'nav-link active':'nav-link'">
+                        <i class="nav-icon fa fa-hand-o-up" aria-hidden="true"></i>
+                        <p>
+                            系统配置
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a data-selected="statistics"
+                       th:href="@{/admin/statistics/toStatistics}"
+                       th:class="${path}=='toStatistics'?'nav-link active':'nav-link'">
+                        <i class="nav-icon fa fa-hand-o-up" aria-hidden="true"></i>
+                        <p>
+                            统计分析
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a data-selected="sys-setting"
+                       th:href="@{/admin/tips/toEdit}"
+                       th:class="${path=='tips_edit'||path=='profile'}?'nav-link active':'nav-link'">
+                        <i class="nav-icon fa fa-hand-o-up" aria-hidden="true"></i>
+                        <p>
+                            公告设置
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/admin/logout}" class="nav-link">
+                        <i class="fa fa-sign-out nav-icon"></i>
+                        <p>安全退出</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+</html>
