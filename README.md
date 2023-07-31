@@ -23,4 +23,4 @@
 
 Java语言，SpringBoot框架，maven依赖管理，mysql数据库，HTML页面，bootstrap框架。
 
-详询 微信1：egvh56ufy7hh ，微信2：A15192572135 ，钉钉：chengxuyuandabo ，QQ：821898835 ，承接商业项目和毕设
+详询 微信1：egvh56ufy7hh ，微信2：dabocode ，钉钉：chengxuyuandabo ，QQ：821898835 ，承接商业项目和毕设
