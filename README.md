@@ -1,7 +1,7 @@
 # SpringBootChongWuMall
  基于JAVA SpringBoot和HTML宠物交易商店系统
 
-演示视频链接：https://live.csdn.net/v/315756
+演示视频链接：https://www.bilibili.com/video/BV1XK4y1i7VE/
 
 功能介绍：
 
